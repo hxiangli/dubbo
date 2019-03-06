@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<constant name="struts.action.excludePattern" value="/app/js/ueditor/.*" />
+	<constant name="struts.action.extension" value="action" />
+	<constant name="struts.custom.i18n.resources" value="message"></constant>
+	<constant name="struts.multipart.maxSize" value="209715200000"></constant>
+	<constant name="struts.struts.locale" value="zh_CN" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<package name="struts2" extends="struts-default">
+	<!-- 测试dubbo -->
+	<action name="test" class="com.dubbo.service.TestService.LoginAction">
+		<result name="success">/success.jsp</result>
+		<result name="fail">/fail.jsp</result>
+	</action>
+	</package>
+</struts>
